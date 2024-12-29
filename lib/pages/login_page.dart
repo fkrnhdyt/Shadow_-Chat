@@ -40,7 +40,7 @@ class LoginPage extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const Text('welcome Back mortal'),
+          const Text('welcome'),
           const SizedBox(height: 25),
           CustomTextField(
             text: 'Email',

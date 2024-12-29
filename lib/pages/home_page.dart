@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('MinimalChat'),
+          title: const Text('Shadow Chat'),
           backgroundColor: Colors.transparent,
           foregroundColor: Colors.grey,
           elevation: 0,

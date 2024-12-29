@@ -48,7 +48,7 @@ class RegisterPage extends StatelessWidget {
             const SizedBox(
               height: 50,
             ),
-            const Text('Welcome To Join Mortal'),
+            const Text('Registre Here'),
             const SizedBox(height: 25),
              CustomTextField(
               text: 'Username',

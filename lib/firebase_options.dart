@@ -17,13 +17,19 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -46,30 +52,11 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDQGDsCp9AEmof5GYBOoMD1zYAcr5fpBas',
-    appId: '1:944324164537:web:74983e25539d8ae3f45468',
-    messagingSenderId: '944324164537',
-    projectId: 'minimal-app-b1c88',
-    authDomain: 'minimal-app-b1c88.firebaseapp.com',
-    storageBucket: 'minimal-app-b1c88.firebasestorage.app',
-    measurementId: 'G-FLKGE4J48H',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBQNj_-a2Z0SqxpJ5YsqNylQWqGqF9dPQE',
-    appId: '1:944324164537:android:e18aa745d7482655f45468',
+    appId: '1:944324164537:android:8e8eceb9009a5ac3f45468',
     messagingSenderId: '944324164537',
     projectId: 'minimal-app-b1c88',
     storageBucket: 'minimal-app-b1c88.firebasestorage.app',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD26p5BB5mT2ggWF02eCVuWCtojz8Zff-s',
-    appId: '1:944324164537:ios:3a5de6009285b699f45468',
-    messagingSenderId: '944324164537',
-    projectId: 'minimal-app-b1c88',
-    storageBucket: 'minimal-app-b1c88.firebasestorage.app',
-    iosBundleId: 'com.example.minimalchat',
   );
 }
